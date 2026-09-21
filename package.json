@@ -1,0 +1,10 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "孙雨霏的个人简历页面",
+  "scripts": {
+    "preview": "node preview-server.js",
+    "deploy": "node deploy.js"
+  }
+}

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孙雨霏 · 个人简历</title>
+<meta name="description" content="孙雨霏 - 大数据管理与应用 · 数据分析 / 数据挖掘方向 · 2027 届本科在读">
+<meta name="author" content="孙雨霏">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB</text></svg>">
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --accent: #f59e0b;
+    --text: #1f2937;
+    --text-soft: #4b5563;
+    --muted: #9ca3af;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --border: #e5e7eb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg-soft);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 960px;
+    margin: 32px auto;
+    background: var(--bg);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 48px 56px;
+    position: relative;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border: 3px solid rgba(255,255,255,0.5);
+    flex-shrink: 0;
+  }
+  .hero-name h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .hero-name .title {
+    font-size: 16px;
+    margin-top: 6px;
+    opacity: 0.9;
+    font-weight: 400;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #1f2937;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .hero-summary {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.92;
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+  }
+  .sidebar {
+    background: #fafbfc;
+    padding: 36px 32px;
+    border-right: 1px solid var(--border);
+  }
+  .main {
+    padding: 36px 48px;
+  }
+  section { margin-bottom: 32px; }
+  section:last-child { margin-bottom: 0; }
+  h2.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.section-title .icon { font-size: 16px; }
+  .info-list { list-style: none; }
+  .info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--text-soft);
+    word-break: break-all;
+  }
+  .info-list .label {
+    font-weight: 600;
+    color: var(--text);
+    min-width: 60px;
+    flex-shrink: 0;
+  }
+  .skill-group { margin-bottom: 18px; }
+  .skill-group h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tags span {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+    transition: all 0.2s;
+  }
+  .skill-tags span:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 22px;
+    border-left: 2px solid var(--border);
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--primary);
+  }
+  .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .item-title { font-size: 16px; font-weight: 700; color: var(--text); }
+  .item-sub { font-size: 13px; color: var(--text-soft); }
+  .item-time {
+    font-size: 12px;
+    color: var(--primary);
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .item-desc {
+    font-size: 14px;
+    color: var(--text-soft);
+    margin-top: 6px;
+  }
+  .item-desc ul {
+    margin-top: 6px;
+    padding-left: 20px;
+  }
+  .item-desc ul li {
+    margin-bottom: 4px;
+  }
+  .item-desc b { color: var(--text); font-weight: 600; }
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .project-tags span {
+    font-size: 11px;
+    padding: 2px 8px;
+    background: #f3f4f6;
+    color: var(--text-soft);
+    border-radius: 3px;
+  }
+  .award-list { list-style: none; padding: 0; }
+  .award-list li {
+    font-size: 14px;
+    color: var(--text-soft);
+    padding: 6px 0 6px 24px;
+    position: relative;
+    border-bottom: 1px dashed var(--border);
+  }
+  .award-list li:last-child { border-bottom: none; }
+  .award-list li::before {
+    content: "🏅";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-size: 14px;
+  }
+  footer.foot {
+    background: #f9fafb;
+    padding: 20px 56px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+  footer.foot a { color: var(--primary); text-decoration: none; }
+  @media (max-width: 768px) {
+    .page { margin: 0; border-radius: 0; }
+    header.hero { padding: 32px 24px; }
+    .content { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 24px; }
+    .main { padding: 28px 24px; }
+    .hero-name h1 { font-size: 26px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; border-radius: 0; }
+    .skill-tags span:hover { background: #fff; color: var(--text-soft); border-color: var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ============ HEADER ============ -->
+  <header class="hero">
+    <div class="hero-top">
+      <div class="avatar">👩‍💻</div>
+      <div class="hero-name">
+        <h1>孙雨霏</h1>
+        <div class="title">大数据管理与应用 · 数据分析 / 数据挖掘方向</div>
+        <span class="hero-tag">2027 届 · 本科在读 · 辽宁大连</span>
+      </div>
+    </div>
+    <p class="hero-summary">
+      大连财经学院大数据管理与应用专业本科在读，主修 Python / SQL / Hadoop / Spark / 数据可视化，两项全国性大数据与电子商务赛事获奖；曾任校就业联合会副主席，统筹大型活动 10+ 场；熟悉完整数据链路，希望在数据分析 / 数据挖掘 / 商业分析方向积累实战经验。
+    </p>
+  </header>
+
+  <!-- ============ BODY ============ -->
+  <div class="content">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar">
+
+      <section>
+        <h2 class="section-title"><span class="icon">📞</span>联系方式</h2>
+        <ul class="info-list">
+          <li><span class="label">手机</span><span>176-1517-9958</span></li>
+          <li><span class="label">邮箱</span><span>2110623631@qq.com</span></li>
+          <li><span class="label">所在</span><span>辽宁大连 · 可实习</span></li>
+          <li><span class="label">届别</span><span>2027 届 · 本科</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🛠</span>专业技能</h2>
+
+        <div class="skill-group">
+          <h3>数据分析</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>数据库 / SQL</h3>
+          <div class="skill-tags">
+            <span>MySQL</span><span>MongoDB</span><span>多表关联</span><span>窗口函数</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>大数据平台</h3>
+          <div class="skill-tags">
+            <span>Hadoop</span><span>HDFS</span><span>MapReduce</span><span>Spark</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>可视化 / 工具</h3>
+          <div class="skill-tags">
+            <span>Tableau</span><span>Excel</span><span>Git</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🎓</span>主修课程</h2>
+        <ul class="info-list">
+          <li><span style="font-size:13px;color:var(--text-soft);">数据结构与算法</span></li>
+          <li><span style="font-size:13px;color:var(--text-soft);">数据库系统原理</span></li>
+          <li><span style="font-size:13px;color:var(--text-soft);">Python 编程</span></li>
+          <li><span style="font-size:13px;color:var(--text-soft);">大数据技术基础</span></li>
+          <li><span style="font-size:13px;color:var(--text-soft);">Hadoop 生态系统</span></li>
+          <li><span style="font-size:13px;color:var(--text-soft);">数据可视化</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🌐</span>语言 / 其他</h2>
+        <ul class="info-list">
+          <li><span class="label">中文</span><span>母语</span></li>
+          <li><span class="label">英语</span><span>大学英语四六级备考</span></li>
+          <li><span class="label">普通话</span><span>二级甲等</span></li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+
+      <section>
+        <h2 class="section-title"><span class="icon">🎓</span>教育背景</h2>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">大连财经学院</div>
+              <div class="item-sub">大数据管理与应用 · 全日制本科</div>
+            </div>
+            <div class="item-time">2023.09 — 2027.07</div>
+          </div>
+          <div class="item-desc">
+            系统构建"数据采集 — 清洗 — 建模 — 可视化"完整知识体系，课程项目多次以数据驱动方案获评优秀；竞赛实践与课程学习双线并行，两项全国性赛事获奖检验方案设计与执行落地能力。
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">💼</span>实习经历</h2>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">大连财经学院 · 招生专员</div>
+              <div class="item-sub">暑期实习 · 连续两年返聘</div>
+            </div>
+            <div class="item-time">2024.07 — 2024.08 / 2025.07 — 2025.08</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li><b>咨询解答：</b>负责招生季咨询接待与电话回访，累计服务考生及家长 <b>500+ 人次</b>，以专业、耐心的解答获得考生与家长一致好评。</li>
+              <li><b>数据处理：</b>运用 Excel 完成 <b>1000+ 条</b> 生源信息的录入、清洗与分类统计，产出区域生源分析报表，为宣传策略优化提供数据参考。</li>
+              <li><b>工作反馈：</b>凭借严谨的工作作风与出色的沟通能力，连续两年获院方返聘。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🚀</span>项目 / 竞赛经历</h2>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">第九届"长风杯"全国大学生大数据分析与挖掘竞赛</div>
+              <div class="item-sub">团队核心成员 · 负责数据预处理与挖掘建模 · 省级三等奖</div>
+            </div>
+            <div class="item-time">2024 — 2025</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li><b>数据清洗：</b>独立负责数据预处理环节，使用 Pandas 完成 <b>10 万+ 条</b> 原始数据的清洗与标准化，通过缺失值填补与异常值检测将数据可用率提升至 <b>95%</b> 以上。</li>
+              <li><b>建模输出：</b>基于 Spark 完成特征工程与挖掘建模，结合业务背景输出核心洞察，并制作 Tableau 可视化分析报告，方案获评审认可。</li>
+            </ul>
+            <div class="project-tags">
+              <span>Python</span><span>Pandas</span><span>Spark</span><span>Tableau</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">第十五届全国大学生电子商务"三创赛"</div>
+              <div class="item-sub">团队核心成员 · 主导数据分析与方案论证 · 竞赛三等奖</div>
+            </div>
+            <div class="item-time">2023 — 2024</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li><b>方案设计：</b>主导项目分析方案的设计与落地，完成市场调研数据的采集与整理，通过用户画像与消费趋势分析为商业模式论证提供数据支撑。</li>
+              <li><b>成果输出：</b>输出完整数据支撑报告与可视化展示方案，助力团队在校级选拔中脱颖而出。</li>
+            </ul>
+            <div class="project-tags">
+              <span>Python</span><span>Excel</span><span>Tableau</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🏆</span>校园经历</h2>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">大连财经学院就业联合会 · 副主席</div>
+              <div class="item-sub">统筹部门运营与大型活动策划</div>
+            </div>
+            <div class="item-time">2025.09 — 2026.09</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li>主导策划校园双选会、企业宣讲会等大型活动 <b>10+ 场</b>，累计服务学生 <b>2000+ 人次</b>。</li>
+              <li>建立"需求收集 — 方案策划 — 执行落地 — 效果复盘"标准化流程，满意度达 <b>90%</b> 以上。</li>
+              <li>管理培养 <b>20+ 名</b> 干事，通过明确分工与传帮带显著提升团队执行效率。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">就业联合会 · 办公室副部</div>
+              <div class="item-sub">跨部门协调 · 流程优化</div>
+            </div>
+            <div class="item-time">2024.09 — 2025.09</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li>协助部长完成跨部门协调与文档管理，优化例会与审批流程，部门协同效率明显提升。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-head">
+            <div>
+              <div class="item-title">就业联合会 · 办公室干事</div>
+              <div class="item-sub">会议记录 · 活动执行</div>
+            </div>
+            <div class="item-time">2023.09 — 2024.09</div>
+          </div>
+          <div class="item-desc">
+            <ul>
+              <li>高质量完成会议记录、材料整理与活动执行支持，获学年度"优秀干事"称号。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">🏅</span>荣誉奖项</h2>
+        <ul class="award-list">
+          <li>第九届"长风杯"全国大学生大数据分析与挖掘竞赛 · 省级三等奖</li>
+          <li>第十五届全国大学生电子商务"三创赛" · 竞赛三等奖</li>
+          <li>2023-2024 学年度就业联合会"优秀干事"</li>
+          <li>2023-2024 学年第一学期思想政治理论课"优秀笔记奖"</li>
+          <li>普通话水平测试等级证书</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title"><span class="icon">💡</span>自我评价</h2>
+        <div class="item-desc" style="font-size: 14px;">
+          <p><b>团队协作 · 组织协调</b> —— 三年学生组织历练，完成从干事到副主席的成长路径，主导策划 10+ 场大型活动、覆盖 2000+ 人次，跨部门沟通与团队管理能力经实战检验。</p>
+          <p style="margin-top:10px;"><b>问题解决 · 执行落地</b> —— 在两项全国性竞赛中负责方案设计与执行推进，善于拆解复杂问题、制定计划并闭环落地，面对陌生领域能快速上手、独立破题。</p>
+          <p style="margin-top:10px;"><b>学习适应 · 责任担当</b> —— 能快速掌握新工具与新业务知识，抗压性强、执行力高，责任心强，在快节奏环境中保持稳定高效的产出。</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    © 2026 孙雨霏 · 本简历由
+    <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> 托管 ·
+    <a href="#" id="print-link">打印 / 导出 PDF</a>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('print-link').addEventListener('click', function(e){
+    e.preventDefault();
+    window.print();
+  });
+</script>
+
+</body>
+</html>
